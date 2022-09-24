@@ -20,6 +20,13 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "prettier"],
   rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+        semi: [true, false],
+      },
+    ],
     "linebreak-style": 0,
     "react/react-in-jsx-scope": 0,
     "@typescript-eslint/semi": 0,
