@@ -1,5 +1,9 @@
-function Greet() {
-  return <div>Hello</div>
+type GreetProps = {
+  name?: string
+}
+
+function Greet({ name }: GreetProps) {
+  return <div>Hello {name}</div>
 }
 
 export default Greet
