@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import { expect, test } from "vitest"
+import { expect, it } from "vitest"
 
 // components
 import Greet from "./greet"
@@ -10,13 +10,16 @@ import Greet from "./greet"
  */
 
 describe("Greet", () => {
-  test("Greet renders correcty", () => {
+  // xit() - test.skip()
+  // fit() - test.only9()
+  
+  it("Greet renders correcty", () => {
     render(<Greet />)
     const textElement = screen.getByText(/hello/i)
     expect(textElement).toBeInTheDocument()
   })
 
-  test("Greet renders with a name", () => {
+  it("Greet renders with a name", () => {
     render(<Greet name="lemmy" />)
     const textElement = screen.getByText(/hello lemmy/i)
     expect(textElement).toBeInTheDocument()
